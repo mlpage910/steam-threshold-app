@@ -1,0 +1,13 @@
+# Streamlit Community Cloud reads this file on every restart.
+# Keep server config minimal; the theme matches the static-fallback palette
+# (oxblood / navy / paper) used by the companion findings site.
+[theme]
+primaryColor = "#6b1414"
+backgroundColor = "#fbfaf6"
+secondaryBackgroundColor = "#f1ebd9"
+textColor = "#222222"
+font = "serif"
+
+[server]
+headless = true
+runOnSave = false
