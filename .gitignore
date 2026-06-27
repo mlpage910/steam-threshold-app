@@ -6,3 +6,7 @@ findings.log
 # Large data files - keep out of git, document in README
 data/*.csv
 !data/.gitkeep
+
+# Refresh notebook outputs - allowed in repo (data_v2/ tracked); ignore Colab work dirs
+.ipynb_checkpoints/
+

@@ -9,6 +9,22 @@ upstream and feeds its locked findings (A–VV).
 > · **Static fallback (read-only snapshot):** auto-published to GitHub Pages
 > on every push to `main` (see [deployment](#deployment) below).
 
+## Refresh the data (Colab)
+
+The Steam dataset behind this app is point-in-time (Oct 2024). To refresh it
+without paying for cloud compute or tying up your laptop, run the Colab
+notebook below — it does the scrape, reshapes into the 4 loader CSVs, and
+commits straight to `main` in this repo. See [`docs/refresh-runbook.md`](docs/refresh-runbook.md)
+for setup (one-time, ~5 min).
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlpage910/steam-threshold-app/blob/main/notebooks/refresh_steam_data.ipynb)
+
+- **Scope A** — refresh the 254 known devs (~90 min, drift detection)
+- **Scope B** — full newcomer hunt across Steam (~3.5–5 hr, finds new cohort-candidate devs)
+
+Both scopes write CSVs to `data_v2/` so you can A/B compare against the Oct
+2024 baseline in `data/`.
+
 ## What this is — and isn't
 
 | It is | It isn't |
